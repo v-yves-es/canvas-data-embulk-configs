@@ -35,7 +35,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: external_tool_activation_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     external_tool_activation_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     course_id: {type: 'BIGINT NULL'}

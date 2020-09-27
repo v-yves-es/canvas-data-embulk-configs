@@ -38,7 +38,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: wiki_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     wiki_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     parent_course_id: {type: 'BIGINT NULL'}

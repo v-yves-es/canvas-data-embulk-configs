@@ -43,7 +43,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: submission_comment_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     submission_comment_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     submission_id: {type: 'BIGINT NULL'}

@@ -70,7 +70,7 @@ out:
   database: {{ env.EMBULK_MSSQLDB }}
   default_timezone: {{ env.EMBULK_TZ }}
   table: account_dim
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   mode: replace
   column_options:
     id: {type: 'BIGINT NOT NULL PRIMARY KEY'}

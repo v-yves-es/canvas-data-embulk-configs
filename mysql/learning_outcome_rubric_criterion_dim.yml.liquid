@@ -30,7 +30,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: learning_outcome_rubric_criterion_dim
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     learning_outcome_id: {type: 'BIGINT NULL'}

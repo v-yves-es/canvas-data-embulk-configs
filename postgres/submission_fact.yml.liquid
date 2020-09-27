@@ -49,7 +49,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: submission_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     submission_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     assignment_id: {type: 'BIGINT NULL'}

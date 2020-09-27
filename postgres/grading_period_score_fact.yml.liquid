@@ -39,7 +39,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: grading_period_score_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     score_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     canvas_id: {type: 'INT NULL'}

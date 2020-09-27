@@ -55,7 +55,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: requests
   mode: insert
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     id: {type: 'VARCHAR(256) NOT NULL PRIMARY KEY'}
     timestamp: {type: 'DATETIME NULL', value_type: timestamp, timestamp_format: '%Y-%m-%d %H:%M:%S.%L'}

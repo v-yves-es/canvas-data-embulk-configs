@@ -53,7 +53,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: file_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     file_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     account_id: {type: 'BIGINT NULL'}

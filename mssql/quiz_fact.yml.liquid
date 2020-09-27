@@ -39,7 +39,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: quiz_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     quiz_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     points_possible: {type: 'FLOAT NULL'}

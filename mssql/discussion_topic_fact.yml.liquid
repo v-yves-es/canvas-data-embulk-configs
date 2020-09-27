@@ -42,7 +42,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: discussion_topic_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     discussion_topic_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     course_id: {type: 'BIGINT NULL'}

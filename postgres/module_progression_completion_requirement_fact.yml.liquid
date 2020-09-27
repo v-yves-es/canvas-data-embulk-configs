@@ -46,7 +46,7 @@ out:
   default_timezone: {{ env.EMBULK_TZ }}
   table: module_progression_completion_requirement_fact
   mode: replace
-  insert_method: native
+  insert_method: {{ env.INSERT_MODE }}
   column_options:
     module_progression_completion_requirement_id: {type: 'BIGINT NOT NULL PRIMARY KEY'}
     account_id: {type: 'BIGINT NULL'}
